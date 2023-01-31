@@ -1,0 +1,110 @@
+/*
+Paleta de colores
+color: #A9E5BB;
+color: #FCF6B1;
+color: #F7B32B;
+color: #F72C25;
+color: #2D1E2F;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Merriweather:ital,wght@0,400;1,300&family=Pacifico&family=Roboto+Slab&display=swap'); 
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Merriweather', serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Roboto Slab', serif;
+    box-sizing: border-box;
+}
+
+.header-flex{
+    background-color: #FCF6B1;
+    display: flex;
+    /* Para poner en verticalmente */
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-flex a{
+    color: #2D1E2F;
+}
+
+.logo img{
+    width: 150px;
+}
+
+/* PARA MENÚ ES IMPORTANTE!!!!!!!!!!!!!!! */
+.header-flex ul{
+    display: flex;
+    list-style: none;
+    width: 100vw;
+    justify-content: space-around;
+}
+.header-flex li{
+    margin: 0.5rem;
+}
+.banner-hero{
+    background-image: url('https://www.jll.es/images/global/treant-and-insights/jll-tetris-lenovo-teaser.jpg');
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.banner-hero h1{
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 30%;
+}
+/* PRODUCTO */
+.producto{
+    width: 50vw;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.producto img{
+    width: 40vw;
+}
+/* GRILLA DE PRODUCTOS */
+.productos-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+/* FOOTER */
+.footer p{
+    text-align: center;
+    color: white;
+    background-color: #A9E5BB;
+    padding: 1rem;
+    
+}
+
+/* PARA CUANDO LA PANTALLA SEA MÁS GRANDE QUE DE TABLET*/
+@media(min-width: 768px){
+    /* MENU */
+    .header-flex{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    /* CONTENIDO PRINCIPAL */
+    .banner-hero{
+        background-position: center;
+    }
+
+    /* grillA DE PRODUCTOS */
+    .productos-grid{
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+
+    .producto{
+        width: 24vw;
+    }
+    .producto img{
+        width: 20vw;
+    }
+
+}
